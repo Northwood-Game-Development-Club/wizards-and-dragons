@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b5v8uo4162xwh"]
+[gd_scene load_steps=2 format=3 uid="uid://b5v8uo4162xwh"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_8n0fv"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -7,3 +9,8 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Control"]
+position = Vector2(100, 52)
+scale = Vector2(133.5, 66.5)
+mesh = SubResource("QuadMesh_8n0fv")
