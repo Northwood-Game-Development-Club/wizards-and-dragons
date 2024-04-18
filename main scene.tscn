@@ -1,20 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://b5v8uo4162xwh"]
-
-[ext_resource type="Texture2D" uid="uid://d1qdskc00mcgu" path="res://rock top.png" id="1_qq0as"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_8n0fv"]
+[gd_scene format=3 uid="uid://b5v8uo4162xwh"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Control"]
-texture_filter = 1
+[node name="TileMap" type="TileMap" parent="."]
 position = Vector2(119, 113)
 scale = Vector2(210.75, -200.75)
-mesh = SubResource("QuadMesh_8n0fv")
-texture = ExtResource("1_qq0as")
+format = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -38.0
+offset_right = 75.0625
+offset_bottom = -7.0
+text = "text"
