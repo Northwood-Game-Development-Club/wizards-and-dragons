@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://b5v8uo4162xwh"]
+[gd_scene load_steps=4 format=3 uid="uid://b5v8uo4162xwh"]
+
+[ext_resource type="SpriteFrames" uid="uid://dwnr1y1g2ptje" path="res://playerframes.tres" id="1_ntx3l"]
+[ext_resource type="SpriteFrames" uid="uid://lkpd47l28l0l" path="res://armframes.tres" id="2_u2484"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45u8l"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,6 +13,21 @@
 position = Vector2(119, 113)
 scale = Vector2(210.75, -200.75)
 format = 2
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CapsuleShape2D_45u8l")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+texture_filter = 1
+sprite_frames = ExtResource("1_ntx3l")
+frame_progress = 0.530244
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+texture_filter = 1
+sprite_frames = ExtResource("2_u2484")
+frame_progress = 0.533961
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
