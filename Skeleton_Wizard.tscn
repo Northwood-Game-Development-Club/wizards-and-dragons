@@ -1,0 +1,103 @@
+[gd_scene load_steps=15 format=3 uid="uid://c1gyca7dtgbg5"]
+
+[ext_resource type="Texture2D" uid="uid://cprbityvm4u42" path="res://Skeleton_Cave.png" id="1_ahhgy"]
+[ext_resource type="Texture2D" uid="uid://fu60crsx5520" path="res://Skeleton_Outside.png" id="2_xrhe6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b20e2"]
+size = Vector2(16, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6xm1"]
+atlas = ExtResource("1_ahhgy")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylei6"]
+atlas = ExtResource("1_ahhgy")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtcr5"]
+atlas = ExtResource("1_ahhgy")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wfm6d"]
+atlas = ExtResource("1_ahhgy")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v7w5"]
+atlas = ExtResource("1_ahhgy")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xysvk"]
+atlas = ExtResource("2_xrhe6")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gclar"]
+atlas = ExtResource("2_xrhe6")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sehyx"]
+atlas = ExtResource("2_xrhe6")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s1f5"]
+atlas = ExtResource("2_xrhe6")
+region = Rect2(0, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2b5u6"]
+atlas = ExtResource("2_xrhe6")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3brx4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6xm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylei6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtcr5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wfm6d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v7w5")
+}],
+"loop": true,
+"name": &"Cave",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xysvk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gclar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sehyx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s1f5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2b5u6")
+}],
+"loop": true,
+"name": &"Outside",
+"speed": 10.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Skeleton_Wizard" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skeleton_Wizard"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_b20e2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Skeleton_Wizard"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_3brx4")
+animation = &"Outside"
