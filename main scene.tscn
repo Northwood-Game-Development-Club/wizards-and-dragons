@@ -1,14 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5v8uo4162xwh"]
+[gd_scene load_steps=6 format=3 uid="uid://b5v8uo4162xwh"]
 
+[ext_resource type="Script" path="res://Player.gd" id="1_22pw7"]
 [ext_resource type="SpriteFrames" uid="uid://dwnr1y1g2ptje" path="res://playerframes.tres" id="1_ntx3l"]
-[ext_resource type="Script" path="res://player.gd" id="1_qvits"]
 [ext_resource type="SpriteFrames" uid="uid://lkpd47l28l0l" path="res://armframes.tres" id="2_u2484"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45u8l"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0chb4"]
+size = Vector2(77, 20)
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(119, 113)
@@ -16,20 +20,31 @@ scale = Vector2(210.75, -200.75)
 format = 2
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+lock_rotation = true
+max_contacts_reported = 1
+contact_monitor = true
+script = ExtResource("1_22pw7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CapsuleShape2D_45u8l")
-script = ExtResource("1_qvits")
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = ExtResource("1_ntx3l")
 frame_progress = 0.530244
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+[node name="PlayerArm" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = ExtResource("2_u2484")
 frame_progress = 0.533961
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-20.5, 34)
+shape = SubResource("RectangleShape2D_0chb4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
