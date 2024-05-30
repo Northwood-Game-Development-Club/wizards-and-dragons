@@ -97,9 +97,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Bat_Crow" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
 script = ExtResource("1_5fcux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bat_Crow"]
@@ -107,6 +108,7 @@ shape = SubResource("RectangleShape2D_ekhc4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bat_Crow"]
 texture_filter = 1
+rotation = 3.14159
 sprite_frames = SubResource("SpriteFrames_mv6bb")
 animation = &"Crow Flying"
 frame_progress = 0.711068

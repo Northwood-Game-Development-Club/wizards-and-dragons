@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c84tf4rp5sbf5"]
+[gd_scene load_steps=15 format=3 uid="uid://c1gyca7dtgbg5"]
 
 [ext_resource type="Texture2D" uid="uid://cprbityvm4u42" path="res://Skeleton_Cave.png" id="1_ahhgy"]
 [ext_resource type="Texture2D" uid="uid://fu60crsx5520" path="res://Skeleton_Outside.png" id="2_xrhe6"]
@@ -89,7 +89,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Skeleton_Wizard" type="RigidBody2D" parent="."]
 

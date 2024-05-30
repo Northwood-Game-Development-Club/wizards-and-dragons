@@ -1,12 +1,12 @@
-[gd_scene load_steps=51 format=3 uid="uid://b5v8uo4162xwh"]
+[gd_scene load_steps=52 format=3 uid="uid://b5v8uo4162xwh"]
 
 [ext_resource type="Texture2D" uid="uid://d0c8yk0fcpedl" path="res://pngs/dirt-1.png.png" id="1_3jmtp"]
 [ext_resource type="Script" path="res://Player.gd" id="1_22pw7"]
 [ext_resource type="Texture2D" uid="uid://bs3054s6l6b2s" path="res://cave-1.png.png" id="1_lot5a"]
-[ext_resource type="SpriteFrames" uid="uid://wxmh38h5whpg" path="res://playerframes.tres" id="1_ntx3l"]
+[ext_resource type="SpriteFrames" uid="uid://bjuds6rovx5vw" path="res://playerframes.tres" id="1_ntx3l"]
 [ext_resource type="Texture2D" uid="uid://cqvxvlsydle8c" path="res://cave-2.png.png" id="2_lhao4"]
 [ext_resource type="Texture2D" uid="uid://0hj3ql54ytbt" path="res://pngs/rock diagonal left-1.png.png" id="2_m3fnb"]
-[ext_resource type="SpriteFrames" uid="uid://ufgs8ky2o26k" path="res://armframes.tres" id="2_u2484"]
+[ext_resource type="SpriteFrames" uid="uid://djvpghe8j6t2h" path="res://armframes.tres" id="2_u2484"]
 [ext_resource type="Texture2D" uid="uid://4wjpxrkq4f04" path="res://pngs/rock.png" id="3_dx856"]
 [ext_resource type="Texture2D" uid="uid://bf4ja6giibydk" path="res://cave-3.png.png" id="3_ubs3a"]
 [ext_resource type="Texture2D" uid="uid://by1kpg1ok34cl" path="res://cave-4.png.png" id="4_e304j"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://dwiqi4dpbisp5" path="res://pngs/rock top left.png" id="16_qbcyk"]
 [ext_resource type="Texture2D" uid="uid://cn6qvv7xkvame" path="res://pngs/rock full.png" id="17_fo468"]
 [ext_resource type="Texture2D" uid="uid://bp6k4j8p7k5m7" path="res://pngs/rock diagonal right.png" id="18_6mnjd"]
+[ext_resource type="PackedScene" uid="uid://8dajvgnkly4j" path="res://flying_enemy.tscn" id="28_puoiw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f4dki"]
 texture = ExtResource("1_3jmtp")
@@ -321,22 +322,23 @@ tile_set = SubResource("TileSet_4btnf")
 format = 2
 layer_0/tile_data = PackedInt32Array(196598, 8, 0, 196597, 8, 0, 196596, 5, 0, 196595, 8, 0, 196594, 7, 0, 196593, 5, 0, 196592, 5, 0, 196591, 5, 0, 196590, 5, 0, 196589, 5, 0, 196588, 5, 0, 196587, 7, 0, 196586, 6, 0, 196583, 20, 0, 196582, 6, 0, 196581, 6, 0, 196580, 6, 0, 196579, 6, 0, 196578, 6, 0, 196577, 6, 0, 196576, 6, 0, 196575, 6, 0, 196574, 6, 0, 262110, 8, 0, 262111, 8, 0, 262112, 8, 0, 262113, 8, 0, 262114, 8, 0, 262115, 8, 0, 262116, 8, 0, 262117, 8, 0, 262118, 8, 0, 262119, 8, 0, 262120, 8, 0, 262121, 8, 0, 262122, 8, 0, 262123, 8, 0, 262124, 8, 0, 262125, 8, 0, 262126, 8, 0, 262127, 8, 0, 262128, 8, 0, 262129, 8, 0, 262130, 8, 0, 262131, 8, 0, 262132, 8, 0, 262133, 8, 0, 262134, 8, 0, 262135, 8, 0, 262136, 8, 0, 262137, 8, 0, 262138, 8, 0, 262139, 8, 0, 262140, 8, 0, 262141, 8, 0, 262142, 8, 0, 262143, 8, 0, 196608, 8, 0, 196609, 8, 0, 196610, 8, 0, 196611, 8, 0, 131075, 6, 0, 196600, 8, 0, 196599, 8, 0, 196601, 8, 0, 196602, 8, 0, 196603, 6, 0, 196604, 6, 0, 196605, 6, 0, 196606, 6, 0, 196607, 6, 0, 131072, 6, 0, 131073, 6, 0, 131074, 6, 0, 131058, 12, 0, 131059, 12, 0, 131060, 12, 0, 131055, 5, 0, 131056, 5, 0, 131057, 5, 0, 65521, 5, 0, 65520, 5, 0, 65519, 5, 0, 65518, 5, 0, 131054, 5, 0, 131053, 5, 0, 65517, 7, 0, 131052, 7, 0, -16, 5, 0, -15, 5, 0, -17, 5, 0, -18, 7, 0, -65553, 6, 0, -65552, 6, 0, -65551, 6, 0, -11, 8, 0, -10, 8, 0, -9, 8, 0, -131083, 6, 0, -131082, 6, 0, -131081, 6, 0, -65547, 8, 0, 65525, 8, 0, 131061, 8, 0, 131062, 8, 0, 131063, 8, 0, 65527, 8, 0, 65526, 8, 0, -65546, 8, 0, -65545, 8, 0, 131051, 10, 0, 65516, 10, 0, -19, 10, 0, -65554, 10, 0, -65569, 18, 0, 131065, 8, 0, 131064, 8, 0, 65528, 8, 0, -8, 8, 0, -65544, 8, 0, 65529, 8, 0, -131080, 9, 0, -7, 9, 0, 131066, 9, 0, 196584, 20, 0, 196585, 20, 0, -262157, 21, 0)
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="Player" type="RigidBody2D" parent="."]
+unique_name_in_owner = true
 lock_rotation = true
 max_contacts_reported = 1
 contact_monitor = true
 script = ExtResource("1_22pw7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CapsuleShape2D_45u8l")
 
-[node name="PlayerSprite" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+[node name="PlayerSprite" type="AnimatedSprite2D" parent="Player/CollisionShape2D"]
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = ExtResource("1_ntx3l")
 animation = &"flipped"
 
-[node name="PlayerArm" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
+[node name="PlayerArm" type="AnimatedSprite2D" parent="Player/CollisionShape2D"]
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = ExtResource("2_u2484")
@@ -389,3 +391,5 @@ texture = ExtResource("3_ubs3a")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
 texture = ExtResource("4_e304j")
+
+[node name="Node2D2" parent="." instance=ExtResource("28_puoiw")]
