@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://8dajvgnkly4j"]
+[gd_scene load_steps=17 format=3 uid="uid://8dajvgnkly4j"]
 
+[ext_resource type="Script" path="res://Bat_Crow.gd" id="1_5fcux"]
 [ext_resource type="Texture2D" uid="uid://5b6y8koap7yv" path="res://Bat.png" id="1_dmkrf"]
 [ext_resource type="Texture2D" uid="uid://cj77mx22feqff" path="res://Crow_10fps.png" id="2_sdrfb"]
 
@@ -99,6 +100,7 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 
 [node name="Bat_Crow" type="RigidBody2D" parent="."]
+script = ExtResource("1_5fcux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bat_Crow"]
 shape = SubResource("RectangleShape2D_ekhc4")

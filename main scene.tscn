@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5v8uo4162xwh"]
 
-[ext_resource type="SpriteFrames" uid="uid://dwnr1y1g2ptje" path="res://playerframes.tres" id="1_ntx3l"]
+[ext_resource type="SpriteFrames" uid="uid://bjuds6rovx5vw" path="res://playerframes.tres" id="1_ntx3l"]
 [ext_resource type="Script" path="res://player.gd" id="1_qvits"]
-[ext_resource type="SpriteFrames" uid="uid://lkpd47l28l0l" path="res://armframes.tres" id="2_u2484"]
+[ext_resource type="SpriteFrames" uid="uid://djvpghe8j6t2h" path="res://armframes.tres" id="2_u2484"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45u8l"]
 
@@ -16,6 +16,7 @@ scale = Vector2(210.75, -200.75)
 format = 2
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
+unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CapsuleShape2D_45u8l")
