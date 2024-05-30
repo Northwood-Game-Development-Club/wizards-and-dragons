@@ -32,13 +32,13 @@ shape = SubResource("CapsuleShape2D_45u8l")
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = ExtResource("1_ntx3l")
-frame_progress = 0.530244
+animation = &"flipped"
 
 [node name="PlayerArm" type="AnimatedSprite2D" parent="RigidBody2D/CollisionShape2D"]
 unique_name_in_owner = true
 texture_filter = 1
 sprite_frames = ExtResource("2_u2484")
-frame_progress = 0.533961
+animation = &"flipped"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
