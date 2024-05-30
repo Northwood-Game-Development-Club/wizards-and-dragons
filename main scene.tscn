@@ -1,19 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5v8uo4162xwh"]
-
-[ext_resource type="Script" path="res://Player.gd" id="1_22pw7"]
-[ext_resource type="SpriteFrames" uid="uid://dwnr1y1g2ptje" path="res://playerframes.tres" id="1_ntx3l"]
-[ext_resource type="SpriteFrames" uid="uid://lkpd47l28l0l" path="res://armframes.tres" id="2_u2484"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45u8l"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0chb4"]
-size = Vector2(77, 20)
-[gd_scene load_steps=46 format=3 uid="uid://b5v8uo4162xwh"]
+[gd_scene load_steps=51 format=3 uid="uid://b5v8uo4162xwh"]
 
 [ext_resource type="Texture2D" uid="uid://d0c8yk0fcpedl" path="res://pngs/dirt-1.png.png" id="1_3jmtp"]
+[ext_resource type="Script" path="res://Player.gd" id="1_22pw7"]
 [ext_resource type="Texture2D" uid="uid://bs3054s6l6b2s" path="res://cave-1.png.png" id="1_lot5a"]
+[ext_resource type="SpriteFrames" uid="uid://wxmh38h5whpg" path="res://playerframes.tres" id="1_ntx3l"]
 [ext_resource type="Texture2D" uid="uid://cqvxvlsydle8c" path="res://cave-2.png.png" id="2_lhao4"]
 [ext_resource type="Texture2D" uid="uid://0hj3ql54ytbt" path="res://pngs/rock diagonal left-1.png.png" id="2_m3fnb"]
+[ext_resource type="SpriteFrames" uid="uid://ufgs8ky2o26k" path="res://armframes.tres" id="2_u2484"]
 [ext_resource type="Texture2D" uid="uid://4wjpxrkq4f04" path="res://pngs/rock.png" id="3_dx856"]
 [ext_resource type="Texture2D" uid="uid://bf4ja6giibydk" path="res://cave-3.png.png" id="3_ubs3a"]
 [ext_resource type="Texture2D" uid="uid://by1kpg1ok34cl" path="res://cave-4.png.png" id="4_e304j"]
@@ -311,6 +304,11 @@ sources/17 = SubResource("TileSetAtlasSource_se206")
 sources/18 = SubResource("TileSetAtlasSource_kocst")
 sources/20 = SubResource("TileSetAtlasSource_a7qlc")
 sources/21 = SubResource("TileSetAtlasSource_u42bi")
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_45u8l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0chb4"]
+size = Vector2(77, 20)
 
 [node name="Node2D" type="Node2D"]
 
